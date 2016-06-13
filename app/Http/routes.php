@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/students', function () {
-    return 'all students';
+    return App\Student::all();
 });
