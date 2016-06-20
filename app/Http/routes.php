@@ -24,3 +24,7 @@ Route::get('/students', function () {
 Route::get('/students/add', function () {
     return view('new_student');
 });
+
+Route::post('/students/add', function () {
+    return "student added";
+});

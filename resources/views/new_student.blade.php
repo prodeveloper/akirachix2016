@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form>
+        <form method="post" action="/students/add">
             <label for="name">Name</label>
             <input type="text" name="name"/>
             <label for="email">Email</label>
