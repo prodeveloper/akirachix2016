@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 
 Route::get('/students', function () {
-    return view('students');
-    return App\Student::all();
+    return view('students',['students'=>App\Student::all()]);
+  
+});
+
+Route::get('/students/add', function () {
+    return view('new_student');
 });
