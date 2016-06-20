@@ -26,6 +26,12 @@ Route::get('/students/add', function () {
 });
 
 Route::post('/students/add', function () {
-    return Request::all();
-    return "student added";
+    //Create a new student object as we did in the tinker terminal
+    $student = new App\Student();
+    $student->name= Request::get('name');
+    $student->email= Request::get('email');
+    $student->course= Request::get('course');
+    $student->save();
+    //Once saved redirect back to all students table
+    return Redirect::to('/students');
 });
