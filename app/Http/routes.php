@@ -26,5 +26,6 @@ Route::get('/students/add', function () {
 });
 
 Route::post('/students/add', function () {
+    return Request::all();
     return "student added";
 });
