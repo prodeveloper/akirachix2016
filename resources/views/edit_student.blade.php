@@ -11,18 +11,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </head>
     <body>
-        <form role="form" method="post" action="/students/add">
+        <form role="form" method="post" action="">
              <div class="form-group">
             <label for="name">Name</label>
-            <input class="form-control" type="text" name="name"/>
+            <input class="form-control" type="text" name="name" value="{{$student->name}}" />
             </div>
              <div class="form-group">
             <label for="email">Email</label>
-            <input class="form-control" type="text" name="email"/>
+            <input class="form-control" type="text" name="email" value="{{$student->email}}"/>
             </div>
              <div class="form-group">
             <label for="course">Course</label>
-            <input class="form-control" type="text" name="course"/>
+            <input class="form-control" type="text" name="course" value="{{$student->course}}" />
             </div>
             <input type="hidden" name="_token" value = "{{csrf_token()}}"/>
             <input class="form-control" type="submit" value="Submit"/>
