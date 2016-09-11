@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/lavet',function(){
+    return "Learning Laravel";
+});
 
 Route::get('/students', function () {
     return view('students',['students'=>App\Student::all()]);
@@ -67,3 +70,6 @@ Route::get('/courses', function () {
     return view('courses',['courses'=>App\Course::all()]);
   
 });
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
